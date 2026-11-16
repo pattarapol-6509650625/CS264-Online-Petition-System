@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำร้องขอเพิ่ม-ถอน รายวิชา</title>
+    <link rel="icon" href="pic/TU.png" type="image/png">
+
+</head>
+<script src="script/sessionVerification.js"></script>
+<body onload="authVerification()">
+    <div class="formaddrop">
+        <img src="pic/TU.png" alt="คำร้องขอเพิ่ม-ถอน รายวิชา">
+        <h1 style="text-align: center;">คำร้องขอเพิ่ม-ถอน รายวิชา</h1>
+        <h2 style="text-align: center;">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h2>
+
+        <label>
+            <star>*</star>แทน บังคับใส่ข้อมูล
+        </label>
+        <link rel="stylesheet" type="text/css" href="css/addDropStyle.css">
+        <hr>
+        <form id="form">
+            <label for="date">วันที่<star>*</star></label>
+            <input type="date" id="date" name="date" required>
+            <hr>
+
+            <h3>ข้อมูลส่วนตัวนักศึกษา</h3>
+            <label for="prefix">คำนำหน้าชื่อ(นาย/นาง/นางสาว):<star>*</star></label>
+            <select id="prefix" name="prefix">
+                <option value="นาย">นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+            </select>
+
+            <label for="studentFirstName">ชื่อ:<star>*</star></label>
+            <input type="text" id="studentFirstName" name="studentFirstName" required>
+
+            <label for="studentLastName">นามสกุล:<star>*</star></label>
+            <input type="text" id="studentLastName" name="studentLastName" required><br>
+
+            <label for="studentId">เลขทะเบียน:<star>*</star></label>
+            <input type="text" id="studentId" name="studentId" maxlength="10" placeholder="รหัสนักศึกษา 10 หลัก"
+                required>
+
+            <label for="studentYear" id="stdYear" name="studentYear">ชั้นปีที่</label>
+            <star>*</star></label>
+            <select id="studentYear">
+                <option value="">-- กรุณาเลือกชั้นปี --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+
+            <label id="stdField">สาขาวิชา</label>
+            <star>*</star></label>
+            <select id="studyField" name="studyField">
+                <option value="">------------------------ กรุณาเลือกสาขา ------------------------</option>
+                <option>สาขาวิชาฟิสิกส์</option>
+                <option>สาขาวิชาฟิสิกส์อิเลกทรอนิกส์</option>
+                <option>สาขาวิชาคณิตศาสตร์</option>
+                <option>สาขาวิชาคณิตศาสตร์ประยุกต์</option>
+                <option>สาขาวิชาคณิตศาสตร์การจัดการ (ตรีควบโท)</option>
+                <option>สาขาวิชาเคมี</option>
+                <option>สาขาวิชาเทคโนโลยีชีวภาพ</option>
+                <option>สาขาวิชาเทคโนโลยีการเกษตร</option>
+                <option>สาขาวิชาเทคโนโลยีพลังงานชีวภาพและการแปรรูปเคมีชีวภาพ</option>
+                <option>สาขาวิชาเทคโนโลยีเพื่อการพัฒนายั่งยืน</option>
+                <option>สาขาวิชาเทคโนโลยีดิจิทัลแนวสร้างสรรค์ (หลักสูตรนานาชาติ)</option>
+                <option>สาขาวิชาวิทยาศาสตร์และนวัตกรรมทางอาหาร</option>
+                <option>สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+                <option>สาขาวิชาวิทยาศาสตร์และเทคโนโลยีสิ่งทอ</option>
+                <option>สาขาวิชาสถิติ</option>
+                <option>สาขาวิชาการออกแบบเชิงนวัตกรรมดิจิทัล (หลักสูตรนานาชาติ)</option>
+                <option>สาขาวิชาวัสดุศาสตร์</option>
+                <option>สาขาวิชาวิทยาการคอมพิวเตอร์</option>
+                <option>สาขาวิชาวิทยาศาสตร์อุตสาหการและการจัดการ (หลักสูตรนานาชาติ)</option>
+                <option>สาขาวิชาวิทยาการประกันภัย</option>
+            </select><br>
+
+            <label for="advisor">อาจารย์ที่ปรึกษา:<star>*</star></label>
+            <input type="text" id="advisor" name="advisor" required>
+            <hr>
+
+            <h3>ข้อมูลที่สามารถติดต่อได้ทางไปรษณีย์</h3>
+            <label for="addressNumber">บ้านเลขที่:<star>*</star></label>
+            <input type="text" id="addressNumber" name="addressNumber" required>
+
+            <label for="moo">หมู่:<star>*</star></label>
+            <input type="text" id="moo" name="moo" required>
+
+            <label for="tumbol">ตำบล:<star>*</star></label>
+            <input type="text" id="tumbol" name="tumbol" required><br>
+
+            <label for="amphur">อำเภอ:<star>*</star></label>
+            <input type="text" id="amphur" name="amphur" required>
+
+            <label for="province">จังหวัด:<star>*</star></label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="postalcode">รหัสไปรษณีย์:<star>*</star></label>
+            <input type="text" id="postalcode" name="postalcode" placeholder="รหัสไปรษณีย์ 5 หลัก" required><br>
+            <script>
+                const postalcodeInput = document.getElementById("postalcode");
+
+                postalcodeInput.addEventListener("input", function () {
+                    // กำหนดความยาวสูงสุดให้เท่ากับ 5
+                    if (this.value.length > 5) {
+                        this.value = this.value.slice(0, 5);
+                    }
+                });
+            </script>
+
+            <label for="mobilePhone">เบอร์โทรศัพท์:<star>*</star></label>
+            <input type="text" id="mobilePhone" name="mobilePhone" placeholder="เบอร์โทรศัพท์ 10 หลัก" required>
+            <script>
+                const mobilePhoneInput = document.getElementById("mobilePhone");
+
+                mobilePhoneInput.addEventListener("input", function () {
+                    // กำหนดความยาวสูงสุดให้เท่ากับ 10
+                    if (this.value.length > 10) {
+                        this.value = this.value.slice(0, 10);
+                    }
+                });
+            </script>
+
+            <label for="Phone">เบอร์โทรศัพท์บ้าน(ถ้ามี):</label>
+            <input type="text" id="Phone" name="Phone">
+            <script>
+                const phoneInput = document.getElementById("Phone");
+
+                phoneInput.addEventListener("input", function () {
+                    // กำหนดความยาวสูงสุดให้เท่ากับ 10
+                    if (this.value.length > 10) {
+                        this.value = this.value.slice(0, 10);
+                    }
+                });
+            </script>
+
+            <hr>
+            <h3>วิชาที่ต้องการเพิ่ม/ถอน :</h3>
+            <table id="addDropTable">
+                <tr id="addDropTableHead">
+                    <th>ต้องการ</th>
+                    <th>รหัสวิชา</th>
+                    <th>ชื่อวิชา</th>
+                    <th>section</th>
+                    <th>วัน/เวลา</th>
+                    <th>หน่วยกิต</th>
+                    <th>ชื่อผู้สอน</th>
+                </tr>
+            </table>
+            <br>
+            <div id="addDropButtonDiv">
+                <select id="addDropChoice">
+                    <option value="เพิ่ม">เพิ่ม</option>
+                    <option value="ถอน">ถอน</option>
+                </select>
+                <input type="text" id="subjectID" name="subjectID" placeholder="รหัสวิชา">
+                <input type="text" id="subjectName" name="subjectName" placeholder="วิชา">
+                <input type="text" id="studentSection" name="studentSection" placeholder="section">
+                <input type="text" id="subjectDateTime" name="subjectDateTime" placeholder="วัน/เวลาที่เรียน">
+                <input type="text" id="subjectCredit" name="subjectCredit" placeholder="จำนวนหน่วยกิต">
+                <input type="text" id="subjectProfessor" name="subjectProfessor" placeholder="ชื่อผู้สอน">
+                <!-- <select id="addDropProfCheckChoice" name="addDropProfCheckButton">
+                    <option value="อนุญาต">อนุญาต</option>
+                    <option value="ไม่อนุญาต">ไม่อนุญาต</option>
+                </select> -->
+
+            </div>
+            <br>
+            <script src="script/formSubmit.js"></script>
+            <input type="button" id="addDropTable_addSubjectButton" onclick="addDropTable_addContent()" value="เพิ่มรายการ">
+            <input type="button" id="DeleteaddDropTable_addSubjectButton" style="width: 25%;" onclick="addDropTable_deleteSubject()" value="ลบรายการล่าสุด">
+            <br><br>
+            <label for="cause">เหตุผลที่ขอการเพิ่มถอน<star>*</star></label>
+            <textarea id="cause" name="cause" required></textarea><br>
+
+
+            <button type="submit">ส่งแบบฟอร์ม</button>
+            <script>
+                function checkform(form) {
+                    var inputs = form.getElementsByTagName('input');
+                    for (var i = 0; i < inputs.length; i++) {
+                        // only validate the inputs that have the required attribute
+                        if (inputs[i].hasAttribute("required")) {
+                            // exclude inputs with a specific name attribute
+                            var excludedInputs = ["subjectID", "subjectName", "studentSection", "subjectDateTime", "subjectCredit", "subjectProfessor"]; // Add the names of the inputs to be excluded
+                            if (inputs[i].value == "" && excludedInputs.indexOf(inputs[i].name) === -1) {
+                                // found an empty field that is required and not excluded
+                                alert("กรุณากรองข้อมูลให้ครบ");
+                                return false;
+                            }
+                        }
+                    }
+                    return true;
+                }
+                document.addEventListener('submit', function(e) {
+                    if(checkform(document.getElementById("form"))){
+                        e.preventDefault();
+                        submitAddDropFormAPI()
+                    }
+                });
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

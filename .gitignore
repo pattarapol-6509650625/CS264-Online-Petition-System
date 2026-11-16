@@ -1,0 +1,18 @@
+pom.xml
+application.properties
+.vscode
+ServiceApplication.java
+.env
+
+# Database credentials
+.env
+
+# Build files
+target/
+
+# IntelliJ IDEA
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
